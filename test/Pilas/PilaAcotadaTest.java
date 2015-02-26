@@ -69,4 +69,18 @@ public class PilaAcotadaTest {
            PilaAcotada pila = new PilaAcotada();
            assertEquals(false, pila.estallena());
        }
+         @Test
+       public void testTamannoPilaInicial() {
+           PilaAcotada pila = new PilaAcotada();
+           pila.apilar(1);
+           pila.apilar("hola");
+           assertEquals(2, pila.obtenerTamanno());
+       }
+        @Test
+       public void testTop(){
+           PilaAcotada pila = new PilaAcotada();
+           pila.apilar(1);
+           pila.apilar("hola");
+           assertEquals(2, pila.obtenercima());
+       }
 }

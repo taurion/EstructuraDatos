@@ -30,4 +30,10 @@ public class PilaAcotada {
     public boolean estallena(){
         return tam==tamMax;
     }
+    public int obtenerTamanno(){
+        return tam;
+    }
+    public Object obtenercima(){
+        return tam;
+    }
 }
