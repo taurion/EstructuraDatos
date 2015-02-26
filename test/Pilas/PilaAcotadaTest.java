@@ -80,7 +80,6 @@ public class PilaAcotadaTest {
        public void testTop(){
            PilaAcotada pila = new PilaAcotada();
            pila.apilar(1);
-           pila.apilar("hola");
-           assertEquals(2, pila.obtenercima());
+           assertEquals(1, pila.obtenercima());
        }
 }
