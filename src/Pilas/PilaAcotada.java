@@ -5,6 +5,9 @@
  */
 package Pilas;
 
+import Excepciones.ExcepcionDePilaLlena;
+import Excepciones.ExcepcionDePilaVacia;
+
 /**
  *
  * @author Usuario
@@ -20,11 +23,17 @@ public class PilaAcotada {
         return tam==0;
     }
 
-    public void apilar(Object ob) {
+    public void apilar(Object ob) throws ExcepcionDePilaLlena {
+         if(tam==100){
+            throw  new Excepciones.ExcepcionDePilaLlena("Esta pila esta vacia");
+        }
         array[tam]=ob;
         tam++;
     }
-    public void desapilar(){
+    public void desapilar() throws ExcepcionDePilaVacia{
+        if(tam==0){
+            throw  new Excepciones.ExcepcionDePilaVacia("Esta pila esta vacia");
+        }
         tam--;
     }
     public boolean estallena(){
@@ -36,4 +45,11 @@ public class PilaAcotada {
     public Object obtenercima(){
         return tam;
     }
+    public Object cima() throws ExcepcionDePilaVacia{
+        if(tam==0){
+            throw  new Excepciones.ExcepcionDePilaVacia("Esta pila esta vacia");
+        }
+        return array[tam];
+    }
+    
 }
