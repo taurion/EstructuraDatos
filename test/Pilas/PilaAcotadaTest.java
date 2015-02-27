@@ -164,7 +164,8 @@ public class PilaAcotadaTest {
             Logger.getLogger(PilaAcotadaTest.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-       @Test
+    //Prueba
+    @Test
     public void testEstaVaciaPilaQueHeLlenado() {
         try {
             PilaAcotada pila = new PilaAcotada();
